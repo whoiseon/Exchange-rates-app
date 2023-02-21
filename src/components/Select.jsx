@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
-function Select() {
+function Select({ onChange, symbols, currency }) {
   return (
     <Block>
       <Line />
-      <StyledSelect>
-        <option value="123">123</option>
+      <StyledSelect onChange={onChange} defaultValue={currency}>
+        {symbols.map((item) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
       </StyledSelect>
     </Block>
   );
@@ -14,6 +18,7 @@ function Select() {
 const Block = styled.div`
   flex: 1;
   position: relative;
+  padding-right: 12px;
 `;
 
 const Line = styled.div`
@@ -32,15 +37,12 @@ const StyledSelect = styled.select`
   padding-right: 16px;
   border: none;
   width: 100%;
-  height: 100%;
+  height: 46px;
   text-align: right;
-  padding: 0 16px;
+  padding-left: 12px;
+  padding-right: 12px;
   font-size: 16px;
   outline: none;
-
-  &:focus {
-    background-color: #191919;
-  }
 `;
 
 export default Select;
