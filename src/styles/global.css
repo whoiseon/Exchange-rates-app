@@ -1,3 +1,5 @@
+@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+
 html,
 body {
   margin: 0;
@@ -6,6 +8,7 @@ body {
   height: 100%;
   background-color: #222222;
   color: #ececec;
+  font-family: 'Pretendard', Helvetica, sans-serif;
 }
 
 #root {

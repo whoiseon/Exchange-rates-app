@@ -160,7 +160,7 @@ const InputGroup = styled.div`
     border: 1px solid rgba(255, 255, 255, 0.6);
   }
   &:focus-within {
-    outline: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
   }
 `;
 
